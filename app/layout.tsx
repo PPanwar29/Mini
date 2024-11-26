@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
-// import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "next-themes";
 import { cn } from '@/lib/utils';
-import { ThemeProvider } from "@/components/ui/theme-provider";
+// import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -44,7 +44,7 @@ export default function RootLayout({
           geistMono.variable // Local GeistMono font variable
         )}>
           <ThemeProvider attribute="class" defaultTheme="dark">
-              {children}
+            {children}
           </ThemeProvider>
       </body>
     </html>
